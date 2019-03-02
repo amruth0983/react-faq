@@ -4,11 +4,10 @@ import axios from "axios";
 polyfill();
 
 const instance = axios.create({
-  baseURL: "https://my-json-server.typicode.com/typicode/demo/"
+  baseURL: "http://localhost:4000/",
+  headers: {
+    "Content-Type": "application/json; charset=utf-8"
+  }
 });
-
-instance.defaults.headers.common["Authorization"] = "AUTH TOKEN FROM INSTANCE";
-
-// instance.interceptors.request...
 
 export default instance;

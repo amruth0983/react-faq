@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import Faq from "./containers/Faq/Faq";
 
-import Blog from "./containers/Blog/Blog";
-
+import "./App.css";
 class App extends Component {
   render() {
     return (
-      // <BrowserRouter basename="/my-app">
-      <BrowserRouter>
-        <div className="App">
-          <Blog />
-        </div>
-      </BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <h2>Vitafy</h2>
+        </header>
+        <Faq />
+      </div>
     );
   }
 }

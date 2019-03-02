@@ -1,0 +1,137 @@
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #0d83ff;
+  position: relative;
+}
+
+.faq-list {
+  width: 700px;
+  margin: 1em auto;
+  text-align: left;
+  border: thin solid #dadce0;
+  border-radius: 8px;
+}
+
+.faq-header h1 {
+  color: #fff;
+  text-align: left;
+  padding: 0.5em 0.5em;
+  font-family: "PT Sans", sans-serif;
+}
+
+.faq-header button {
+  background-color: #0d83ff;
+  border-color: #ffffff;
+  color: #ffffff;
+  border-radius: 0px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  box-shadow: none;
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+  padding: 0 10px 5px;
+  text-transform: uppercase;
+}
+
+.faq-header button:hover {
+  background-color: #ffffff;
+  color: #0d83ff;
+}
+
+.faq-header button:focus {
+  box-shadow: none;
+}
+
+.faq-header button:before {
+  content: "+";
+  padding-right: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.accordion-container .error {
+  margin-top: 15%;
+}
+
+.parent-accordion {
+  width: 100%;
+  border-top: thin solid #dadce0;
+}
+
+.parent-accordion:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: none;
+}
+
+.accordion-heading:hover {
+  background-color: #efefef;
+}
+
+.accordion-heading .arrow {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 45%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #0d83ff;
+}
+
+.accordion-heading.clicked .arrow {
+  border-bottom: 7px solid #0d83ff;
+  border-top: 0;
+}
+
+.accordion-heading.clicked:hover {
+  background-color: inherit;
+}
+
+.accordion-heading {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 16px 52px 16px 64px;
+  color: #0d83ff;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+}
+
+.accordion-content {
+  background: #e8f0fe;
+  text-transform: capitalize;
+  font-size: 13px;
+  overflow-y: hidden;
+  padding: 0px 64px;
+}
+
+.accordion-content button {
+  font-size: 12px;
+  padding: 7px 19px;
+  font-family: "PT Sans", sans-serif;
+  color: #0d83ff;
+  border-color: #0d83ff;
+}
+
+.accordion-open {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.accordion-close {
+  height: 0px;
+  padding-top: 0px;
+  padding-left: 10px;
+}
