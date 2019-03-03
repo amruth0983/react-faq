@@ -20,7 +20,7 @@ class NewFaq extends Component {
     };
     axios.post("/posts", data).then(response => {
       if (response.status === 201 && response.data) {
-        this.props.closeModalAndRefreshList();
+        this.props.closeModalAndRefreshList(response.data);
       }
     });
   };
@@ -29,23 +29,27 @@ class NewFaq extends Component {
     let form = null;
 
     form = (
-      <form onSubmit={this.postDataHandler}>
-        <div className="NewPost">
-          <label>Question</label>
-          <input
-            type="text"
-            value={this.state.title}
-            onChange={event => this.setState({ title: event.target.value })}
-          />
-          <label>Answer</label>
-          <textarea
-            rows="4"
-            value={this.state.content}
-            onChange={event => this.setState({ content: event.target.value })}
-          />
-          <Button outline>Add</Button>
-        </div>
-      </form>
+      <div className="NewPost">
+        <label>Question</label>
+        <input
+          type="text"
+          value={this.state.title}
+          onChange={event => this.setState({ title: event.target.value })}
+        />
+        <label>Answer</label>
+        <textarea
+          rows="4"
+          value={this.state.content}
+          onChange={event => this.setState({ content: event.target.value })}
+        />
+        <Button
+          outline
+          disabled={this.state.title === "" || this.state.content === ""}
+          onClick={this.postDataHandler}
+        >
+          Add
+        </Button>
+      </div>
     );
 
     return (

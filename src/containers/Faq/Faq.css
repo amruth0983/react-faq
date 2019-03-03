@@ -125,6 +125,12 @@
   border-color: #0d83ff;
 }
 
+.accordion-content button:hover {
+  color: #ffffff;
+  background-color: #0d83ff;
+  border-color: #0d83ff;
+}
+
 .accordion-open {
   padding-top: 10px;
   padding-bottom: 20px;

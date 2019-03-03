@@ -60,9 +60,11 @@ class Faq extends Component {
     this.setState({ openAddFaqModal: false });
   };
 
-  closeModalAndRefreshList = () => {
+  closeModalAndRefreshList = postData => {
+    this.setState({
+      posts: this.state.posts.concat(postData)
+    });
     this.closeOpenFaqModal();
-    this.getFaqList();
   };
 
   removeFaq = (event, id, faqIndex) => {
@@ -85,7 +87,7 @@ class Faq extends Component {
     return (
       <div className="accordion-container">
         <div className="faq-header">
-          <h1 class="faq-title">Frequently Asked Questions</h1>
+          <h1 className="faq-title">Frequently Asked Questions</h1>
           <Button onClick={this.openAddFaqModal}>Add</Button>
         </div>
         <div className="faq-list">

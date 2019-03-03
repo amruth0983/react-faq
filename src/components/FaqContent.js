@@ -32,7 +32,7 @@ class Section extends Component {
     return (
       <div className="parent-accordion">
         <div className={headingClassName} onClick={this.handleClick}>
-          <span class="arrow" />
+          <span className="arrow" />
           {post.title}
         </div>
         <div className={className}>
